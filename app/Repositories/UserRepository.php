@@ -13,7 +13,7 @@ class UserRepository
         $this->user = $user;
     }
 
-    public function ggetPaginate($n)
+    public function getPaginate($n)
     {
         return $this->user->paginate($n);
     }
@@ -33,4 +33,8 @@ class UserRepository
     {
         $user->delete();
     }
+
+//    public function getPaginate($nbrPerPage)
+//    {
+//    }
 }

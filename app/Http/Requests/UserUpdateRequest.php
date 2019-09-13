@@ -25,7 +25,7 @@ class UserUpdateRequest extends FormRequest
     {
         return [
             'name' => 'bail|required|max:255',
-            'email' => 'bail|required|email|max:255|unique,email,' . $this->user->id,
+            'email' => 'bail|required|email|max:255|unique:users,email,' . $this->user->id,
         ];
     }
 }
